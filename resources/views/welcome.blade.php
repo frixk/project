@@ -25,8 +25,8 @@
                 </div>
                 <div class="col-6">
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Schedule (Optional)</label>
-                        <input type="input" class="form-control" name="schedule" id="schedule" placeholder="Enter Schedule">
+                        <label for="exampleInputPassword1">Deadline (Optional)</label>
+                        <input type="input" class="form-control" name="schedule" id="schedule" placeholder="Enter Deadline">
                     </div>  
                     <input name="_token" type="hidden" value="{{ csrf_token() }}"/>                  
                     <button type="submit" class="btn btn-primary" style="margin-top:10px;">Submit</button>
