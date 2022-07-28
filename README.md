@@ -7,4 +7,3 @@ docker-composer up -d
 
 http://localhost:8000/
 
-## Security Vulnerabilities
