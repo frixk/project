@@ -25,8 +25,8 @@
                 </div>
                 <div class="col-6">
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Deadline (Optional)</label>
-                        <input type="input" class="form-control" name="deadline" id="deadline" placeholder="Enter Deadline">
+                        <label for="exampleInputPassword1">Schedule (Optional)</label>
+                        <input type="input" class="form-control" name="schedule" id="schedule" placeholder="Enter Schedule">
                     </div>  
                     <input name="_token" type="hidden" value="{{ csrf_token() }}"/>                  
                     <button type="submit" class="btn btn-primary" style="margin-top:10px;">Submit</button>
@@ -38,7 +38,7 @@
         <table id="tasks"  class="table table-bordered table-striped">
                 <thead>
                     <td><b>TASK</b></td>
-                    <td><b>Deadline</b></td>
+                    <td><b>SCHEDULE</b></td>
                     <td><b>COMPLETE</b></td>
                 </thead>
                 <tbody>
@@ -53,7 +53,7 @@
                         @endif
                         {{$l->task}}                
                     </td>
-                    <td>{{$l->Deadline}}</td>
+                    <td>{{$l->schedule}}</td>
                     <td>                        
                         @if($l->updated_at)
                             {{date('F d, Y h:i A', strtotime($l->updated_at))}}
