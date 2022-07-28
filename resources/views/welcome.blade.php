@@ -38,7 +38,7 @@
         <table id="tasks"  class="table table-bordered table-striped">
                 <thead>
                     <td><b>TASK</b></td>
-                    <td><b>SCHEDULE</b></td>
+                    <td><b>DEADLINE</b></td>
                     <td><b>COMPLETE</b></td>
                 </thead>
                 <tbody>
