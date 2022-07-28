@@ -15,7 +15,7 @@ class GuestController extends Controller
     public function submitTask(Request $request){
         $sql =DB::connection('mysql')->table('Tasks')->insert([  
             'task'              => $request->task,
-            'schedule'          => $request->schedule,
+            'deadline'          => $request->deadline,
             'created_at'        => date('Y-m-d H:i:s'),
         ]); 
         
