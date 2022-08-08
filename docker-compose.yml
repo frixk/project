@@ -19,6 +19,8 @@ services:
     depends_on:
       - database
       - redis
+    networks:
+      - netapp
 
   #Database Server
   database:
@@ -34,13 +36,20 @@ services:
         
     volumes:
         - db-data:/var/lib/mysql
+    networks:
+      - netapp
 
   #Redis Server
   redis:
     image: redis:alpine
     command: redis-server --appendonly yes --requirepass "${REDIS_PASSWORD}" 
     ports:
-        - 6379:6379   
+        - 6379:6379 
+    networks:
+      - netapp
 
 volumes:
   db-data: ~
+
+networks:
+  netapp:
